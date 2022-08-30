@@ -16,6 +16,8 @@
 		4DB94A5F28BDE32800FD1224 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A5E28BDE32800FD1224 /* AddOrderViewController.swift */; };
 		4DB94A6228BDE69400FD1224 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A6128BDE69400FD1224 /* Webservice.swift */; };
 		4DB94A6528BDF1F000FD1224 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A6428BDF1F000FD1224 /* Order.swift */; };
+		4DB94A6828BE0B8200FD1224 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A6728BE0B8200FD1224 /* OrderViewModel.swift */; };
+		4DB94A6A28BE0C6500FD1224 /* OrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A6928BE0C6500FD1224 /* OrderListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4DB94A5E28BDE32800FD1224 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 		4DB94A6128BDE69400FD1224 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		4DB94A6428BDF1F000FD1224 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		4DB94A6728BE0B8200FD1224 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		4DB94A6928BE0C6500FD1224 /* OrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		4D330F7B280992480012F864 /* HotCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				4DB94A6628BE0B6400FD1224 /* View Models */,
 				4DB94A6328BDF1E000FD1224 /* Models */,
 				4DB94A6028BDE67B00FD1224 /* Services */,
 				4D1CC88F28BDC5E700B5606C /* View */,
@@ -106,6 +111,15 @@
 				4DB94A6428BDF1F000FD1224 /* Order.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4DB94A6628BE0B6400FD1224 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DB94A6728BE0B8200FD1224 /* OrderViewModel.swift */,
+				4DB94A6928BE0C6500FD1224 /* OrderListViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +196,10 @@
 				4DB94A6528BDF1F000FD1224 /* Order.swift in Sources */,
 				4D330F81280992480012F864 /* OrdersViewController.swift in Sources */,
 				4D330F7D280992480012F864 /* AppDelegate.swift in Sources */,
+				4DB94A6A28BE0C6500FD1224 /* OrderListViewModel.swift in Sources */,
 				4D330F7F280992480012F864 /* SceneDelegate.swift in Sources */,
 				4DB94A6228BDE69400FD1224 /* Webservice.swift in Sources */,
+				4DB94A6828BE0B8200FD1224 /* OrderViewModel.swift in Sources */,
 				4DB94A5F28BDE32800FD1224 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,7 @@
 		4D330F89280992570012F864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D330F87280992570012F864 /* LaunchScreen.storyboard */; };
 		4DB94A5F28BDE32800FD1224 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A5E28BDE32800FD1224 /* AddOrderViewController.swift */; };
 		4DB94A6228BDE69400FD1224 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A6128BDE69400FD1224 /* Webservice.swift */; };
+		4DB94A6528BDF1F000FD1224 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A6428BDF1F000FD1224 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4D330F8A280992570012F864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB94A5E28BDE32800FD1224 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 		4DB94A6128BDE69400FD1224 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		4DB94A6428BDF1F000FD1224 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		4D330F7B280992480012F864 /* HotCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				4DB94A6328BDF1E000FD1224 /* Models */,
 				4DB94A6028BDE67B00FD1224 /* Services */,
 				4D1CC88F28BDC5E700B5606C /* View */,
 				4D1CC88E28BDC5A400B5606C /* Controllers */,
@@ -95,6 +98,14 @@
 				4DB94A6128BDE69400FD1224 /* Webservice.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4DB94A6328BDF1E000FD1224 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DB94A6428BDF1F000FD1224 /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB94A6528BDF1F000FD1224 /* Order.swift in Sources */,
 				4D330F81280992480012F864 /* OrdersViewController.swift in Sources */,
 				4D330F7D280992480012F864 /* AppDelegate.swift in Sources */,
 				4D330F7F280992480012F864 /* SceneDelegate.swift in Sources */,

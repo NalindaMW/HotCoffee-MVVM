@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		4D330F7D280992480012F864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D330F7C280992480012F864 /* AppDelegate.swift */; };
 		4D330F7F280992480012F864 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D330F7E280992480012F864 /* SceneDelegate.swift */; };
-		4D330F81280992480012F864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D330F80280992480012F864 /* ViewController.swift */; };
+		4D330F81280992480012F864 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D330F80280992480012F864 /* OrdersViewController.swift */; };
 		4D330F84280992480012F864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D330F82280992480012F864 /* Main.storyboard */; };
 		4D330F86280992570012F864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D330F85280992570012F864 /* Assets.xcassets */; };
 		4D330F89280992570012F864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D330F87280992570012F864 /* LaunchScreen.storyboard */; };
+		4DB94A5F28BDE32800FD1224 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94A5E28BDE32800FD1224 /* AddOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D330F79280992480012F864 /* HotCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D330F7C280992480012F864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D330F7E280992480012F864 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D330F80280992480012F864 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D330F80280992480012F864 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		4D330F83280992480012F864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D330F85280992570012F864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D330F88280992570012F864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D330F8A280992570012F864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB94A5E28BDE32800FD1224 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1CC88E28BDC5A400B5606C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D330F80280992480012F864 /* OrdersViewController.swift */,
+				4DB94A5E28BDE32800FD1224 /* AddOrderViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4D1CC88F28BDC5E700B5606C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D330F82280992480012F864 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4D330F70280992480012F864 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +75,10 @@
 		4D330F7B280992480012F864 /* HotCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				4D1CC88F28BDC5E700B5606C /* View */,
+				4D1CC88E28BDC5A400B5606C /* Controllers */,
 				4D330F7C280992480012F864 /* AppDelegate.swift */,
 				4D330F7E280992480012F864 /* SceneDelegate.swift */,
-				4D330F80280992480012F864 /* ViewController.swift */,
-				4D330F82280992480012F864 /* Main.storyboard */,
 				4D330F85280992570012F864 /* Assets.xcassets */,
 				4D330F87280992570012F864 /* LaunchScreen.storyboard */,
 				4D330F8A280992570012F864 /* Info.plist */,
@@ -138,9 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D330F81280992480012F864 /* ViewController.swift in Sources */,
+				4D330F81280992480012F864 /* OrdersViewController.swift in Sources */,
 				4D330F7D280992480012F864 /* AppDelegate.swift in Sources */,
 				4D330F7F280992480012F864 /* SceneDelegate.swift in Sources */,
+				4DB94A5F28BDE32800FD1224 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

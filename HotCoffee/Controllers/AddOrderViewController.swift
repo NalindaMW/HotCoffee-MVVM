@@ -12,6 +12,8 @@ class AddOrderViewController: UIViewController {
     private var viewModel = AddCoffeeOrderViewModel()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     private var coffeeSizesSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -31,6 +33,23 @@ class AddOrderViewController: UIViewController {
             coffeeSizesSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
+    
+    @IBAction func save() {
+        if let validName = nameTextField.text, !validName.isEmpty,
+           let validEmail = emailTextField.text, !validEmail.isEmpty {
+            let selectedCoffeeSize = viewModel.sizes[coffeeSizesSegmentedControl.selectedSegmentIndex]
+            
+            guard let indexPath = tableView.indexPathForSelectedRow else {
+                print("No coffee was selected")
+                return
+            }
+            
+            viewModel.name = validName
+            viewModel.email = validEmail
+            viewModel.selectedCoffeeType = viewModel.types[indexPath.row]
+            viewModel.selectedCoffeeSize = selectedCoffeeSize
+        }
+    }
 }
 
 extension AddOrderViewController: UITableViewDataSource, UITableViewDelegate {
@@ -47,5 +66,11 @@ extension AddOrderViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+    }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
+    }
 }

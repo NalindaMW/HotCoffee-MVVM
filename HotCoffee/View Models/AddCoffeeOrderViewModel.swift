@@ -12,6 +12,9 @@ struct AddCoffeeOrderViewModel {
     var name: String?
     var email: String?
     
+    var selectedCoffeeType: String?
+    var selectedCoffeeSize: String?
+    
     var types: [String] {
         return CoffeeType.allCases.map{ $0.rawValue.capitalized }
     }

@@ -86,6 +86,20 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Lp-9O-Ek5">
                                 <rect key="frame" x="0.0" y="56" width="414" height="421"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoffeeTypeCell" id="KXv-3t-RYy">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KXv-3t-RYy" id="LhM-6z-KXf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="uIT-GF-dB1" id="aRV-iq-hIk"/>
+                                    <outlet property="delegate" destination="uIT-GF-dB1" id="2zZ-MY-sKk"/>
+                                </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aYs-w3-aE1">
                                 <rect key="frame" x="104" y="527" width="206" height="32"/>
@@ -134,6 +148,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="R0F-S0-J9g"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="eMv-tT-rrT"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9Lp-9O-Ek5" id="wyQ-nj-2uU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgu-LK-xFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

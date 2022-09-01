@@ -48,6 +48,8 @@ class AddOrderViewController: UIViewController {
             viewModel.email = validEmail
             viewModel.selectedCoffeeType = viewModel.types[indexPath.row]
             viewModel.selectedCoffeeSize = selectedCoffeeSize
+            
+            let order = Order(viewModel)
         }
     }
 }

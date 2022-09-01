@@ -42,3 +42,33 @@ extension Order {
         self.size = selectedSize
     }
 }
+
+extension Order {
+    
+    static var getOrders: Resource<[Order]> = {
+        guard let url = URL(string: "https://warp-wiry-rugby.glitch.me/orders") else {
+            fatalError("Not a valid url")
+        }
+        
+        return Resource<[Order]>(url: url)
+    }()
+    
+    static func create(vm: AddCoffeeOrderViewModel) -> Resource<Order> {
+        
+        let order = Order(vm)
+        
+        guard let url = URL(string: "https://warp-wiry-rugby.glitch.me/orders") else {
+            fatalError("Not a valid url")
+        }
+        
+        guard let data = try? JSONEncoder().encode(order) else {
+            fatalError("Error encoding order.")
+        }
+        
+        var resource = Resource<Order>(url: url)
+        resource.httpMethod = .post
+        resource.body = data
+        
+        return resource
+    }
+}

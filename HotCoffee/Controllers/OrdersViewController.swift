@@ -20,13 +20,7 @@ class OrdersViewController: UIViewController {
     }
 
     private func fetchOrders() {
-        guard let coffeeURL = URL(string: "https://warp-wiry-rugby.glitch.me/orders") else {
-            fatalError("URL is not correct")
-        }
-        
-        let resource = Resource<[Order]>(url: coffeeURL)
-        
-        Webservice().load(resource: resource) { [weak self] result in
+        Webservice().load(resource: Order.getOrders) { [weak self] result in
             switch result {
                 case .success(let orders):
                     print(orders)

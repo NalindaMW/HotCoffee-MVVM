@@ -32,6 +32,14 @@ class OrdersViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navC = segue.destination as? UINavigationController, let addCoffeeVC = navC.viewControllers.first as? AddOrderViewController else {
+            fatalError("Error performing segue.")
+        }
+        
+        addCoffeeVC.delegate = self
+    }
 }
 
 extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
@@ -57,5 +65,23 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+}
+
+extension OrdersViewController: AddCoffeeOrderDelegate {
+    func addCoffeeOrderDidSave(order: Order, controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+        
+        let orderVM = OrderViewModel(order: order)
+        orderListViewModel.ordersViewModel.append(orderVM)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func addCoffeeOrderDidCancel(controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 

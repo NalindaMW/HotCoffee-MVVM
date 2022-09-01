@@ -135,7 +135,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Order" id="Oh7-SK-mus">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="R0F-S0-J9g"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="R0F-S0-J9g">
+                            <connections>
+                                <action selector="close" destination="uIT-GF-dB1" id="C9f-Ip-j6A"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="eMv-tT-rrT">
                             <connections>
                                 <action selector="save" destination="uIT-GF-dB1" id="i7k-mX-i5J"/>

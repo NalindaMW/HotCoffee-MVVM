@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol AddCoffeeOrderDelegate {
+    func addCoffeeOrderDidSave(order: Order, controller: UIViewController)
+    func addCoffeeOrderDidCancel(controller: UIViewController)
+}
+
 class AddOrderViewController: UIViewController {
 
     private var viewModel = AddCoffeeOrderViewModel()
+    var delegate: AddCoffeeOrderDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -49,7 +55,24 @@ class AddOrderViewController: UIViewController {
             viewModel.selectedCoffeeType = viewModel.types[indexPath.row]
             viewModel.selectedCoffeeSize = selectedCoffeeSize
             
-            let order = Order(viewModel)
+            Webservice().load(resource: Order.create(vm: viewModel)) { result in
+                switch result {
+                case .success(let order):
+                    if let delegate = self.delegate {
+                        DispatchQueue.main.async {
+                            delegate.addCoffeeOrderDidSave(order: order, controller: self)
+                        }
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    @IBAction func close() {
+        if let delegate = self.delegate {
+            delegate.addCoffeeOrderDidCancel(controller: self)
         }
     }
 }
